@@ -41,10 +41,11 @@ body {
 /* =====================
    TABLE
 ===================== */
+/*
 .table-wrapper {
   overflow-x: auto;
 }
-
+*/
 .hh-table {
   width: 100%;
   border-collapse: collapse;
