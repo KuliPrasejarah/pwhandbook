@@ -341,6 +341,14 @@ h1 {
   background-color: rgba(230, 230, 230, 0.9);
 }
 
+/* === HH Table Wrapper (Scroll Area) === */
+.hh-table-wrapper {
+  max-height: 70vh;          /* tinggi area scroll */
+  overflow-y: auto;
+  border: 2px solid #666;
+  border-radius: 8px;
+}
+
 /* === HH Material Table Enhanced === */
 .hh-table {
   border-collapse: collapse;
@@ -356,17 +364,21 @@ h1 {
   vertical-align: middle;
 }
 
-.hh-table th {
-  background-color: rgba(220, 220, 220, 0.95);
-  font-weight: bold;
+/* === STICKY HEADER (INI KUNCINYA) === */
+.hh-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: rgba(220, 220, 220, 0.98);
+  z-index: 5;
 }
 
-.hh-table tr {
+/* === Hover Row === */
+.hh-table tbody tr {
   transition: background-color 0.15s ease;
 }
 
-.hh-table tr:hover {
-  background-color: rgba(255, 235, 180, 0.85); /* highlight hover */
+.hh-table tbody tr:hover {
+  background-color: rgba(255, 235, 180, 0.85);
 }
 
 /* === Image Column === */
