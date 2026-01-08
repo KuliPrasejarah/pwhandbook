@@ -410,16 +410,6 @@ h1 {
   font-weight: bold;
 }
 
-/* === FIX ROWSPAN HOVER === */
-.hh-table tr.hh-group:hover td {
-  background-color: rgba(255, 235, 180, 0.85);
-}
-
-/* pastiin cell rowspan juga ikut */
-.hh-table tr.hh-group:hover td[rowspan] {
-  background-color: rgba(255, 235, 180, 0.85);
-}
-
 /* === Footer === */
 footer {
   text-align: center;
