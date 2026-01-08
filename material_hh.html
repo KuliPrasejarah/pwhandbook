@@ -14,83 +14,44 @@
   <div id="header"></div>
 
   <div class="container">
-    <div class="section owned-items">
-      <div class="section-title">Owned Items</div>
-      <div class="columns">
-        <div class="column">
-          <h3>S-Item</h3>
-          <div class="row"><label>Epic +0:</label><input type="number"></div>
-          <div class="row"><label>Epic +1:</label><input type="number"></div>
-          <div class="row"><label>Epic +2:</label><input type="number"></div>
-          <div class="row"><label>Legend +0:</label><input type="number"></div>
-          <div class="row"><label>Legend +1:</label><input type="number"></div>
-          <div class="row"><label>Legend +2:</label><input type="number"></div>
-          <div class="row"><label>Legend +3:</label><input type="number"></div>
-          <div class="row"><label>Mythic +0:</label><input type="number"></div>
-          <div class="row"><label>Mythic +1:</label><input type="number"></div>
-          <div class="row"><label>Mythic +2:</label><input type="number"></div>
-          <div class="row"><label>Mythic +3:</label><input type="number"></div>
-          <div class="row"><label>Mythic +4:</label><input type="number"></div>
-        </div>
-        <div class="column">
-          <h3>Fodder</h3>
-          <div class="row"><label>Epic +0:</label><input type="number"></div>
-          <div class="row"><label>Epic +1:</label><input type="number"></div>
-          <div class="row"><label>Epic +2:</label><input type="number"></div>
-          <div class="row"><label>Legend +0:</label><input type="number"></div>
-          <div class="row"><label>Legend +1:</label><input type="number"></div>
-          <div class="row"><label>Legend +2:</label><input type="number"></div>
-          <div class="row"><label>Legend +3:</label><input type="number"></div>
-          <div class="row"><label>Mythic +0:</label><input type="number"></div>
-          <div class="row"><label>Mythic +1:</label><input type="number"></div>
-          <div class="row"><label>Mythic +2:</label><input type="number"></div>
-          <div class="row"><label>Mythic +3:</label><input type="number"></div>
-          <div class="row"><label>Mythic +4:</label><input type="number"></div>
-        </div>
-      </div>
-    </div>
-    <div class="section-arrow">></div>
-    <div class="section target-items">
-      <div class="section-title">Target Item</div>
-      <div class="columns">
-        <div class="column">
-          <h3>S-Item</h3>
-          <div class="row"><label>Epic +0:</label><input type="number"></div>
-          <div class="row"><label>Epic +1:</label><input type="number"></div>
-          <div class="row"><label>Epic +2:</label><input type="number"></div>
-          <div class="row"><label>Legend +0:</label><input type="number"></div>
-          <div class="row"><label>Legend +1:</label><input type="number"></div>
-          <div class="row"><label>Legend +2:</label><input type="number"></div>
-          <div class="row"><label>Legend +3:</label><input type="number"></div>
-          <div class="row"><label>Mythic +0:</label><input type="number"></div>
-          <div class="row"><label>Mythic +1:</label><input type="number"></div>
-          <div class="row"><label>Mythic +2:</label><input type="number"></div>
-          <div class="row"><label>Mythic +3:</label><input type="number"></div>
-          <div class="row"><label>Mythic +4:</label><input type="number"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <br>
-
-  <div class="container">
     <div class="section">
-      <div class="section-title">Result Item Needed</div>
-      <div class="columns">
-        <div class="column">
-          <h3>S-Item</h3>
-          <div class="result-box" id="r_sbox">
-            <div class="result-value" id="r_sitem">0</div>
-          </div>
-        </div>
-        <div class="column">
-          <h3>Fodder</h3>
-          <div class="result-box" id="r_fbox">
-            <div class="result-value" id="r_fodder">0</div>
-          </div>
-        </div>
-      </div>
+      <div class="section-title">HH Material List</div>
+  
+      <table class="hh-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama Lama</th>
+            <th>Nama Baru</th>
+            <th>Level</th>
+            <th>HH</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Quin Tian's Blade</td><td>Chientien's Edge</td><td>60</td><td>-</td></tr>
+          <tr><td>2</td><td>Drum of Disruption</td><td>Broken Drum</td><td>60</td><td>-</td></tr>
+          <tr><td>3</td><td>Skeleton Piece</td><td>Piece of Skeleton</td><td>60</td><td>-</td></tr>
+  
+          <tr><td>4</td><td>Quin Tian's Armor Piece</td><td>Chientien's Armor Shard</td><td>70</td><td>-</td></tr>
+          <tr><td>5</td><td>Complete Drum Case</td><td>Framework of Drum</td><td>70</td><td>-</td></tr>
+          <tr><td>6</td><td>Ancient Snake Hide</td><td>Ancient Serpent's Skin</td><td>70</td><td>-</td></tr>
+          <tr><td>7</td><td>Ghostly Tentacle</td><td>Soulgatherer's Tentacle</td><td>70</td><td>-</td></tr>
+          <tr><td>8</td><td>Broken Golden Armor Piece</td><td>Broken Shard of Gold Armor</td><td>70</td><td>-</td></tr>
+          <tr><td>9</td><td>Skull of Riddles</td><td>Mysterious Skull</td><td>70</td><td>-</td></tr>
+  
+          <tr><td>13</td><td>Ancient Serpent Soul</td><td>Ancient Serpent's Orb</td><td>80</td><td class="hh-gold">GOLD</td></tr>
+          <tr><td>16</td><td>Spirit of Golden Armor</td><td>Golden Spirit</td><td>80</td><td class="hh-gold">GOLD</td></tr>
+          <tr><td>20</td><td>Shenwu Leutenant's Black Jewel</td><td>Forshura's Black Orb</td><td>70</td><td class="hh-gold">GOLD</td></tr>
+  
+          <tr><td>33</td><td>Prismatic Touch</td><td>Touch of the Seven Luminaries</td><td>90</td><td class="hh-gold">GOLD</td></tr>
+          <tr><td>42</td><td>Power of the Prismatic Spirit</td><td>Power of the Seven Luminaries</td><td>90</td><td class="hh-gold">GOLD</td></tr>
+          <tr><td>45</td><td>Soul of Ancient Devil</td><td>Ancient Devil's Soul</td><td>90</td><td class="hh-gold">GOLD</td></tr>
+  
+          <tr><td>84</td><td>Spirit of Heaven and Earth</td><td>Heart of Nature</td><td>100</td><td class="hh-red">RED</td></tr>
+          <tr><td>85</td><td>Dusk Scepter of Might</td><td>Twilight Scepter</td><td>100</td><td class="hh-red">RED</td></tr>
+          <tr><td>86</td><td>The Golden Mask</td><td>Golden Mask</td><td>100</td><td class="hh-red">RED</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
