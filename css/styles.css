@@ -364,8 +364,14 @@ h1 {
 .hh-table td {
   border: 2px solid #666;        /* garis tabel jelas */
   padding: 6px 8px;
-  text-align: left;
   vertical-align: middle;
+}
+
+.hh-table th {
+  text-align: center;
+}
+.hh-table td {
+  text-align: left;
 }
 
 /* === STICKY HEADER (INI KUNCINYA) === */
