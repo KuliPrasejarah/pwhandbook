@@ -1,490 +1,131 @@
-/* === Base === */
+/* =====================
+   GLOBAL
+===================== */
 * {
-  font-family: monospace, 'Courier New', Courier;
   box-sizing: border-box;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
 }
 
 body {
-  background: url('../pwhandbook.jpg') no-repeat center center fixed;
-  background-size: cover;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f0f0f;
+  color: #eaeaea;
 }
 
-/* === Header (Fixed & Clean Version) === */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgba(255, 255, 255, 1);
-  padding: 8px 16px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4px);
-  flex-wrap: wrap; /* biar gak tumpuk pas layar kecil */
-  gap: 10px;
+#header,
+#footer {
+  width: 100%;
 }
 
-.header h1 {
-  background-color: transparent;
-  color: inherit; /* kalau mau ikut warna container, atau bisa pake rgba(0,0,0,0) */
-  box-shadow: none;
-  padding: 0;
-  margin: 0;
-  border-radius: 0;
-  width: auto;
-  font-size: 1.3rem;
-  text-align: center;
-  line-height: 1.4;
-  flex: 1;
-  font-family: monospace, 'Courier New', Courier;
-}
-
-.home-link {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 4px;
-  color: #ffffff;
-  padding: 8px;
-  text-align: center;
-  text-decoration: none;
-  width: 80px;
-  transition: 0.3s;
-  flex-shrink: 0; /* biar gak gepeng pas layar kecil */
-}
-
-.home-link:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.site-title, 
-.site-title-alt {
-  font-size: large;
-  margin: 0;
-  color: #000000;
-}
-
-.site-title-alt {
-  display: none;
-  line-height: 1.5;
-  margin-bottom: 32px;
-  text-align: center;
-  color: #000000;
-}
-
-/* === Responsif Header === */
-@media screen and (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .header h1 {
-    font-size: 1.1rem;
-  }
-
-  .home-link {
-    width: 100%;
-    max-width: 200px;
-  }
-
-  .site-title {
-    display: none;
-  }
-
-  .site-title-alt {
-    display: block;
-  }
-}
-
-/* === Menu Container === */
-.menu-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.menu-box {
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 16px;
-  padding: 40px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  max-width: 90vw;
-  backdrop-filter: blur(6px);
-}
-
-.menu-button {
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 2px solid #808080;
-  border-radius: 8px;
-  width: 150px;
-  height: 180px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.2s;
-  padding: 10px;
-}
-
-.menu-button:hover {
-  background-color: rgba(240, 240, 240, 0.9);
-  transform: scale(1.05);
-}
-
-.menu-button img {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
-.menu-button span {
-  font-weight: bold;
-  color: #000000;
-}
-
-/* === Kalkulator Page === */
-h1 {
-  text-align: center;
-  color: #000;
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 20px;
-  border-radius: 12px;
-  width: fit-content;
-  margin: 30px auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  backdrop-filter: blur(6px);
-}
-
-/* === Container dan Section === */
+/* =====================
+   LAYOUT
+===================== */
 .container {
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 16px;
-  padding: 20px 40px;
-  margin: 20px auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  width: fit-content;
-  max-width: 90vw;
-  backdrop-filter: blur(6px);
-
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .section {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .section-title {
-  text-align: center;
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 16px;
-  font-size: 1.2em;
+  margin-bottom: 15px;
+  border-left: 5px solid #caa24d;
+  padding-left: 10px;
 }
 
-.section-arrow {
-  font-size: 3rem;       /* ukuran panah besar */
-  font-weight: bold;
-  color: #333;           /* warna panah */
-  align-self: center;    /* biar verticalnya di tengah */
-  margin: 0 20px;        /* jarak ke section kiri & kanan */
+/* =====================
+   TABLE
+===================== */
+.table-wrapper {
+  overflow-x: auto;
 }
 
-/* === Columns === */
-.columns {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.column {
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 2px solid #808080;
-  border-radius: 12px;
-  padding: 20px;
-  width: 240px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
-
-.column:hover {
-  transform: scale(1.02);
-}
-
-.column h3 {
-  text-align: center;
-  margin-top: 0;
-  color: #333;
-}
-
-/* === Input Row === */
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 6px 0;
-}
-
-.row label {
-  flex: 1;
-  font-size: 0.9em;
-}
-
-.row input {
-  width: 60px;
-  padding: 4px;
-  border: 1px solid #999;
-  border-radius: 4px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-/* === Result Box === */
-.result-box {
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 2px solid #808080;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.result-value {
-  font-size: 1.4em;
-  font-weight: bold;
-}
-
-/* === Panels (Middle Section) === */
-.panel {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 16px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  padding: 24px 32px;
-  margin: 20px auto;
-  width: fit-content;
-  max-width: 95vw;
-  backdrop-filter: blur(6px);
-}
-
-.panel h2 {
-  text-align: center;
-  margin-bottom: 16px;
-  font-size: 1.4em;
-}
-
-/* === Grid untuk Panel 1 === */
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
-}
-
-.info-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.info-item label {
-  margin-bottom: 4px;
-  font-weight: bold;
-}
-
-.info-item input {
-  width: 100%;
-  padding: 6px;
-  border: 1px solid #999;
-  border-radius: 6px;
-  text-align: center;
-}
-
-/* === Table Styling === */
-.calc-table table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.calc-table th, 
-.calc-table td {
-  border: 1px solid #888;
-  padding: 8px 10px;
-  text-align: center;
-}
-
-.calc-table th {
-  background-color: rgba(240, 240, 240, 0.9);
-  font-weight: bold;
-}
-
-.calc-table tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.calc-table tr:hover {
-  background-color: rgba(230, 230, 230, 0.9);
-}
-
-/* === HH Table Wrapper (Scroll Area) === */
-.hh-table-wrapper {
-  max-height: 70vh;          /* tinggi area scroll */
-  overflow-y: auto;
-  border: 2px solid #666;
-  border-radius: 8px;
-}
-
-/* === HH Material Table Enhanced === */
 .hh-table {
-  border-collapse: collapse;
   width: 100%;
-  font-size: 0.9em;
+  border-collapse: collapse;
+  background: #1a1a1a;
 }
 
 .hh-table th,
 .hh-table td {
-  border: 2px solid #666;        /* garis tabel jelas */
-  padding: 6px 8px;
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
   vertical-align: middle;
+  font-size: 14px;
 }
 
 .hh-table th {
-  text-align: center;
-}
-.hh-table td {
-  text-align: left;
+  background: #222;
+  font-weight: bold;
 }
 
-/* === STICKY HEADER (INI KUNCINYA) === */
-.hh-table thead th {
-  position: sticky;
-  top: 0;
-  background-color: rgba(220, 220, 220, 0.98);
-  z-index: 5;
-}
-
-/* === Hover Row === */
-.hh-table tbody tr {
-  transition: background-color 0.15s ease;
-}
-
-.hh-table tbody tr:hover {
-  background-color: rgba(255, 235, 180, 0.85);
-}
-
-/* === Image Column === */
+/* =====================
+   IMAGE
+===================== */
 .hh-img {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
-  image-rendering: pixelated;
 }
 
-/* === HH Type === */
+/* =====================
+   ITEM STATUS
+===================== */
 .hh-gold {
-  color: #b8860b;
+  color: gold;
   font-weight: bold;
 }
 
 .hh-red {
-  color: #b22222;
+  color: #ff4c4c;
   font-weight: bold;
 }
 
-/* === Footer === */
-footer {
-  text-align: center;
-  padding: 10px;
-  margin-top: auto;
-  background-color: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
-  backdrop-filter: blur(4px);
-  border-radius: 8px 8px 0 0;
-}
-
-/* === Responsif === */
-@media screen and (max-width: 600px) {
-  .columns {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* === Modal Credits === */
-.credits-modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(5px);
+/* =====================
+   MENU PAGE
+===================== */
+.menu-container {
+  display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 40px 20px;
 }
 
-.credits-box {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 16px;
-  padding: 24px 32px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  width: 90%;
-  max-width: 400px;
-  animation: popIn 0.25s ease;
-  position: relative;
+.menu-box {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.credits-box h2 {
-  text-align: center;
-  margin-top: 0;
-  font-size: 1.4rem;
-  color: #000;
-}
-
-.credits-box h3 {
-  margin-bottom: 6px;
-  color: #333;
-}
-
-.credits-box ul {
-  margin: 0 0 16px 20px;
-  padding: 0;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 22px;
+.menu-button {
+  width: 160px;
+  background: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 15px;
   cursor: pointer;
-  color: #555;
-  transition: 0.2s;
+  text-align: center;
+  transition: transform 0.2s, background 0.2s;
 }
 
-.close-btn:hover {
-  color: #000;
+.menu-button:hover {
+  transform: translateY(-4px);
+  background: #262626;
 }
 
-@keyframes popIn {
-  from {opacity: 0; transform: scale(0.9);}
-  to {opacity: 1; transform: scale(1);}
+.menu-button img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+.menu-button span {
+  display: block;
+  font-weight: bold;
 }
