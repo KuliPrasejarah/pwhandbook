@@ -411,6 +411,10 @@ h1 {
   font-weight: bold;
 }
 
+tr.sync-hover td {
+  background: #2a2a2a;
+}
+
 /* === Footer === */
 footer {
   text-align: center;
