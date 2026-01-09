@@ -345,16 +345,16 @@ h1 {
 }
 
 /* === HH Table Wrapper (Scroll Area) === */
-.hh-table-wrapper {
-  max-width: 60vw;
-  overflow-x: auto;
-  overflow-y: visible;
+.table-wrapper {
+  max-width: 100%;
+  overflow-y: auto;
   border: 2px solid #666;
   border-radius: 8px;
 }
 
 /* === HH Material Table Enhanced === */
 .hh-table {
+  width:100%;
   border-collapse: collapse;
   font-size: 0.9em;
 }
@@ -476,7 +476,7 @@ footer {
 }
 
 /* === Responsif === */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .columns {
     flex-direction: column;
     align-items: center;
@@ -485,8 +485,8 @@ footer {
     max-width: 90vw;
     padding: 8px;
   }
-  .hh-table-wrapper {
-    max-width: 90vw;
+  .table-wrapper {
+    max-width: 80vw;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
