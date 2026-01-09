@@ -188,7 +188,6 @@ h1 {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-
 }
 
 .section {
@@ -358,7 +357,6 @@ h1 {
 /* === HH Material Table Enhanced === */
 .hh-table {
   border-collapse: collapse;
-  width: 100%;
   font-size: 0.9em;
 }
 
