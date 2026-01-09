@@ -487,7 +487,7 @@ footer {
   }
   .hh-table-wrapper {
     max-width: 90vw;
-    overflow-x: auto;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
   .hh-table {
