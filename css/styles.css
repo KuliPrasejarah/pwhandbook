@@ -387,14 +387,14 @@ h1 {
   transition: background-color 0.15s ease;
 }
 
-.hh-table tbody tr:hover {
+.hh-table tbody td:hover {
   background-color: rgba(255, 235, 180, 0.85);
 }
 
 /* === Image Column === */
 .hh-img {
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
   image-rendering: pixelated;
 }
