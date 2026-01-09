@@ -347,8 +347,10 @@ h1 {
 
 /* === HH Table Wrapper (Scroll Area) === */
 .hh-table-wrapper {
-  max-width: 60vw;
-  overflow-y: auto;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
   border: 2px solid #666;
   border-radius: 8px;
 }
