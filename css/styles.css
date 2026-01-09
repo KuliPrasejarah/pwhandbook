@@ -383,7 +383,7 @@ h1 {
 }
 
 /* === Hover Row === */
-.hh-table tbody tr {
+.hh-table tbody td {
   transition: background-color 0.15s ease;
 }
 
