@@ -347,11 +347,14 @@ h1 {
 
 /* === HH Table Wrapper (Scroll Area) === */
 .hh-table-wrapper {
-  max-width: 60vh;
+  max-height: 70vh;
+  max-width: 60vw;
+  overflow-x: auto;
   overflow-y: auto;
   border: 2px solid #666;
   border-radius: 8px;
 }
+
 
 /* === HH Material Table Enhanced === */
 .hh-table {
